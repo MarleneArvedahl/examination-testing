@@ -10,7 +10,18 @@ describe ('Shoes',() => {
         const sizeInput = screen.queryByRole('input');
     
         expect(sizeInput).toHaveValue(null);
+
+
+        const addButton = screen.getByText('+');
+        const removeButton = screen.getByText('-');
+    
+    fireEvent.click(addButton);
+    expect(screen.getByLabelText('person 1')).toBeInTheDocument();
+
+    fireEvent.click(removeButton);
+    expect(screen.queryByLabelText('person 1')).not.toBeInTheDocument();
+  });
+
     
       });
 
-})
