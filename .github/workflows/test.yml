@@ -12,8 +12,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Install modules
-        working-directory: './individuell-examination-strajk-bowling-main/strajk-bowling'
+        working-directory: '../strajk-bowling'
         run: npm install
       - name: Run tests
-        working-directory: './individuell-examination-strajk-bowling-main/strike-bowling'
+        working-directory: '../strajk-bowling'
         run: npm run test
