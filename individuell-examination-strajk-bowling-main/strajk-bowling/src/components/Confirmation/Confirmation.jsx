@@ -6,7 +6,7 @@ import Input from '../Input/Input';
 
 function Confirmation({ confirmationDetails, setConfirmation }) {
   return (
-    <section className='confirmation'>
+    <section data-testid="confirmation" className='confirmation'>
       <Navigation setConfirmation={setConfirmation} />
       <Top title='See you soon!' />
       {confirmationDetails?.active ? (
@@ -41,7 +41,7 @@ function Confirmation({ confirmationDetails, setConfirmation }) {
           />
           <article className='confirmation__price'>
             <p>Total:</p>
-            <p>{confirmationDetails.price} sek</p>
+            <p data-testid="Price">{confirmationDetails.price} sek</p>
           </article>
           <button
             className='button confirmation__button'

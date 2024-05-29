@@ -1,33 +1,31 @@
 import { http, HttpResponse } from 'msw';
 
+export const SUCCESS_RESULT_1 = {
+    active: true,
+    id: 'STR6270BFGR',
+    lanes: '1',
+    people: '1',
+    price: 220,
+    shoes: ['23'],
+    when: '2024-05-01 22:50',
+};
 
-// const todos = [
-//     {
-//       userId: 1,
-//       id: 1,
-//       title: 'delectus aut autem',
-//       completed: false,
-//     },
-//     {
-//       userId: 1,
-//       id: 2,
-//       title: 'quis ut nam facilis et officia qui',
-//       completed: false,
-//     },
-//     {
-//       userId: 1,
-//       id: 3,
-//       title: 'fugiat veniam minus',
-//       completed: false,
-//     },
-//     {
-//       userId: 1,
-//       id: 4,
-//       title: 'et porro tempora',
-//       completed: true,
-//     },
-//   ];
-  
+
+export const SUCCESS_RESULT_2 = {
+  active: true,
+  id: "STR1844HFSZ",
+  lanes: "1",
+  people: "2",
+  price: 340,
+  shoes: ['33', '44'],
+  when: "2024-05-29T12:00",
+};
+
+export const handlers = [
+    http.post('https://h5jbtjv6if.execute-api.eu-north-1.amazonaws.com', () => {
+        return HttpResponse.json(SUCCESS_RESULT_1);
+    }),
+];
 //   export const handlers = [
 //     http.get('https://jsonplaceholder.typicode.com/todos', () => {
 //       return HttpResponse.json(todos);
