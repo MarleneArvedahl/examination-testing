@@ -21,7 +21,7 @@ describe ('Booking', () => {
 
         fireEvent.click(addButton);
         
-        // sizeInputs = screen.queryAllByLabelText('Shoe size / person 1');
+
         sizeInputs = screen.queryAllByTestId('shoe-input');
         removeButtons = screen.queryAllByText('-');
 
@@ -91,7 +91,7 @@ describe ('Booking', () => {
 
         const confirmation = await screen.findByTestId('confirmation');
 
-        console.log("Booked! Current page:")
+       
         screen.debug(confirmation);
 
         const when = screen.getByLabelText('When');
@@ -114,7 +114,3 @@ describe ('Booking', () => {
         expect(screen.getByText('strIIIIIike!')).toBeTruthy();
     });
 })
-
-
-//testa att confirmation renderas när man skickar bokningen och annars visa bokningssidan.
-//testa att det kommer ett felmeddelande om antalet inte stämmer mellan antal skor och personer.

@@ -26,13 +26,3 @@ export const handlers = [
         return HttpResponse.json(SUCCESS_RESULT_1);
     }),
 ];
-//   export const handlers = [
-//     http.get('https://jsonplaceholder.typicode.com/todos', () => {
-//       return HttpResponse.json(todos);
-//     }),
-//     http.post('https://h5jbtjv6if.execute-api.eu-north-1.amazonaws.com', () => {
-//       return HttpResponse.json({ success: true, message: 'Booking sent' });
-//     }),
-//   ];
-
-//har ändrat https länk till den jag tror det skall vara. Den med GET hittar jag ingen anledning till att ha?
